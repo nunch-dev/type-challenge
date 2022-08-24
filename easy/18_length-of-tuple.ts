@@ -23,7 +23,7 @@
 
 /* _____________ 여기에 코드 입력 _____________ */
 
-type Length<T> = any
+type Length<T extends readonly any[]> = T['length'];
 
 
 /* _____________ 테스트 케이스 _____________ */
