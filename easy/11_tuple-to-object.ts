@@ -21,7 +21,9 @@
 
 /* _____________ 여기에 코드 입력 _____________ */
 
-type TupleToObject<T extends readonly any[]> = any;
+type TupleToObject<T extends readonly any[]> = {
+  [P in T[number]]: P
+};
 
 
 
