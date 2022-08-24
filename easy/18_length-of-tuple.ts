@@ -23,7 +23,7 @@
 
 /* _____________ 여기에 코드 입력 _____________ */
 
-type Length<T extends readonly any[]> = T['length'];
+type Length<T extends readonly any[]> = T extends {length: infer L} ? L : never;
 
 
 /* _____________ 테스트 케이스 _____________ */
